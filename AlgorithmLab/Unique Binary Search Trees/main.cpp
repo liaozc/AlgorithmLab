@@ -55,8 +55,8 @@ int GetNumber2(int n)
 
 int main()
 {
-	printf("3:number : %d \n", GetNumber(5));
-	printf("3:number : %d \n", GetNumber2(5));
+	printf("3:number : %d \n", GetNumber(10));
+	printf("3:number : %d \n", GetNumber2(10));
 
     return 0;
 }
