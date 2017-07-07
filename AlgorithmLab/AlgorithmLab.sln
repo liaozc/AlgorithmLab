@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Populating Next Right Point
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "N Queens", "N Queens\N Queens.vcxproj", "{B3F33442-A3F5-41D4-BBB5-60AF8704FC11}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Maximum Subarray", "Maximum Subarray\Maximum Subarray.vcxproj", "{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{B3F33442-A3F5-41D4-BBB5-60AF8704FC11}.Release|x64.Build.0 = Release|x64
 		{B3F33442-A3F5-41D4-BBB5-60AF8704FC11}.Release|x86.ActiveCfg = Release|Win32
 		{B3F33442-A3F5-41D4-BBB5-60AF8704FC11}.Release|x86.Build.0 = Release|Win32
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Debug|x64.ActiveCfg = Debug|x64
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Debug|x64.Build.0 = Debug|x64
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Debug|x86.ActiveCfg = Debug|Win32
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Debug|x86.Build.0 = Debug|Win32
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Release|x64.ActiveCfg = Release|x64
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Release|x64.Build.0 = Release|x64
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Release|x86.ActiveCfg = Release|Win32
+		{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
