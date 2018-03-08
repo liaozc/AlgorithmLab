@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Single Number", "Single Number\Single Number.vcxproj", "{56A95F9B-9975-44EE-BAA8-66F701A2F792}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Maximum Depth of Binary Tree", "Maximum Depth of Binary Tree\Maximum Depth of Binary Tree.vcxproj", "{D7B548FA-6971-4952-93B1-97FA8D2FD285}"
@@ -26,6 +28,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Maximum Subarray", "Maximum Subarray\Maximum Subarray.vcxproj", "{44FAA927-9D34-441D-B8FE-D6D92AB4DA39}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reservoir Sample", "Reservoir Sample\Reservoir Sample.vcxproj", "{A2932EBE-09EB-4D52-B51C-1DF1FD417370}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "God’s Number", "God’s Number\God’s Number.vcxproj", "{195CC80F-4F58-41D6-8AE0-3839E42B8381}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +197,18 @@ Global
 		{A2932EBE-09EB-4D52-B51C-1DF1FD417370}.Release|x64.Build.0 = Release|x64
 		{A2932EBE-09EB-4D52-B51C-1DF1FD417370}.Release|x86.ActiveCfg = Release|Win32
 		{A2932EBE-09EB-4D52-B51C-1DF1FD417370}.Release|x86.Build.0 = Release|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Debug|Win32.ActiveCfg = Debug|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Debug|Win32.Build.0 = Debug|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Debug|x64.ActiveCfg = Debug|x64
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Debug|x64.Build.0 = Debug|x64
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Debug|x86.ActiveCfg = Debug|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Debug|x86.Build.0 = Debug|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Release|Win32.ActiveCfg = Release|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Release|Win32.Build.0 = Release|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Release|x64.ActiveCfg = Release|x64
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Release|x64.Build.0 = Release|x64
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Release|x86.ActiveCfg = Release|Win32
+		{195CC80F-4F58-41D6-8AE0-3839E42B8381}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
