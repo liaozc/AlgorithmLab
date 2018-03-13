@@ -33,6 +33,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "God’s Number", "God’s N
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "So Easy", "So Easy\So Easy.vcxproj", "{83DCE7B5-FD3F-48BB-983C-0D7AEBA2EC43}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Big Number Multiply", "Big Number Multiply\Big Number Multiply.vcxproj", "{ADF05DBA-D525-46A0-BC94-21DE9C52C269}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -223,6 +225,18 @@ Global
 		{83DCE7B5-FD3F-48BB-983C-0D7AEBA2EC43}.Release|x64.Build.0 = Release|x64
 		{83DCE7B5-FD3F-48BB-983C-0D7AEBA2EC43}.Release|x86.ActiveCfg = Release|Win32
 		{83DCE7B5-FD3F-48BB-983C-0D7AEBA2EC43}.Release|x86.Build.0 = Release|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Debug|Win32.Build.0 = Debug|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Debug|x64.ActiveCfg = Debug|x64
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Debug|x64.Build.0 = Debug|x64
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Debug|x86.ActiveCfg = Debug|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Debug|x86.Build.0 = Debug|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Release|Win32.ActiveCfg = Release|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Release|Win32.Build.0 = Release|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Release|x64.ActiveCfg = Release|x64
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Release|x64.Build.0 = Release|x64
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Release|x86.ActiveCfg = Release|Win32
+		{ADF05DBA-D525-46A0-BC94-21DE9C52C269}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
