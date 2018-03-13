@@ -66,14 +66,18 @@ int MultiplyNumber(char A[],int _countA, char B[],int _countB, char Ret[],int _c
 int main()
 {
 	char str[100];
-	scanf_s("%s",str,100);
-	int countA = strlen(str);
-	ChangeToNumber(A, str,countA);
-	scanf_s("%s", str,100);
-	int countB = strlen(str);
-	ChangeToNumber(B, str, countB);
-	int CountR = MultiplyNumber(A, countA, B, countB, Result, 200);
-	PrintNumber(Result, CountR);
+	while(true){
+		scanf_s("%s", str, 100);
+		if (strcmp("exit", str) == 0) break;
+		int countA = strlen(str);
+		ChangeToNumber(A, str, countA);
+		scanf_s("%s", str, 100);
+		int countB = strlen(str);
+		ChangeToNumber(B, str, countB);
+		int CountR = MultiplyNumber(A, countA, B, countB, Result, 200);
+		PrintNumber(Result, CountR);
+	};
+	
     return 0;
 }
 
