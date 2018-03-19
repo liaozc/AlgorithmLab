@@ -11,7 +11,7 @@
 
 	解题思路：
 	建构DP[N][1<<N],
-	令DP[i][j]是当前在 i 城市，处于 j 状态时走过的距离。易知，DP[0][0] = 0;
+	令DP[i][j]是当前在 i 城市，处于 j 状态时走过的距离。易知，DP[0][0] = 0; 状态 j 为所有走过的城市的编码。
 	对于和 i 相连的所有节点，刷新其状态。
 	如果每个节点的每个状态都被贡献了有效值，那么就能够得到所有DP的情况。
 	那么是
@@ -21,26 +21,34 @@
 	for(int s = 0; s < (1<<N); ++s )
 		for(int i = 0; i < N; ++ i)
 	注意到第一情况下,由于是对某个节点的所有状态的遍历，会出现有的状态并未被正式赋值前就被访问了。
-	例如 0->1->2->0, 会有状态 s = 01 和 10 和 11 在访问时是 INF 值，这是错误的。 而第二种情况下，
-	以状态为序，由于每一种状态 s 只会影响其他节点的 s’ ，s‘ > s, 所以，不存在当前的状态改变之前访
-	问过的状态，导致以前的访问是无效值的问题。所以采用第二种方式。
+	例如 0->1->2->0, 会有状态 s = 001 和 010 和 011 在访问时是 INF 值，这是错误的。 而第二种情况下，
+	以状态为序，由于每一种状态 s 只会影响其他节点的状态 s',其中s’ > s, 所以能影响s'状态的取值的
+	所有s状态都是被遍历过的。所以使用第二种方式。
+
 	
 */
-
+#if 1
 #include <cstdio>
 #include <cstdlib>
 #include <time.h>
 #include <string>
 
+#define min(a,b) a < b ? a : b;
 const int N = 20;
 int map[N][N];
-const int INF = 0x8FFFFFFF;
+const int INF = 0x0FFFFFFF;
 
-void clear_map()
+int dp[N][1 << N];
+
+void clear()
 {
 	for (int i = 0; i < N; ++i)
 		for (int j = 0; j < N; ++j)
 			map[i][j] = INF;
+
+	for (int i = 0; i < N; ++i)
+		for (int j = 0; j < (1 << N); ++j)
+			dp[i][j] = INF;
 
 }
 
@@ -55,19 +63,136 @@ void floyd(int n)
 	}
 }
 
+void print_m(int n)
+{
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			printf("%d ", map[i][j]);
+		}
+		printf("\n");
+	}
+}
+
 
 int main()
 {
-	clear_map();
+	clear();
 	int n = 1;
 	scanf_s("%d",&n);
 	for (int i = 0; i < n; i++) 
 		for (int j = 0; j < n; j++) 
 			scanf_s("%d", &map[i][j]);
 	floyd(n);
+	print_m(n);
+	dp[0][0] = 0;
 
+	for (int s = 0; s < (1 << n); ++s) {
+		for (int i = 0; i < n; ++i) {
+			if (dp[i][s] == INF) continue;
+			for (int j = 0; j < n; ++j) {
+				if (s & (1 << j)) continue;
+				int nextState = s | (1 << j);
+				dp[j][nextState] = min(dp[j][nextState], dp[i][s] + map[i][j]);
+			}
+		}
+	}
 
+	printf("%d\n", dp[0][(1<<n)- 1]);
 
     return 0;
 }
+#else
 
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<queue>
+#include<cstdio>
+#include<cstring>
+#include<cmath>
+#include<map>
+#include<iomanip>
+
+
+#define INF 0x3f3f3f3f
+using namespace std;
+typedef  long long ll;
+const int MOD = 100000007;
+const int N = 16;
+
+int dp[N][1 << N];
+
+int n;
+int mm[N + 2][N + 2];
+
+void floyd()
+{
+	for (int k = 0; k < n; k++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			for (int i = 0; i < n; i++)
+			{
+				mm[i][j] = min(mm[i][j], mm[i][k] + mm[k][j]);
+			}
+		}
+
+	}
+}
+
+void print_m(int n)
+{
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			printf("%d ", mm[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	//    freopen("data.txt","r",stdin);
+
+	while (cin >> n)
+	{
+		memset(dp, INF, sizeof(dp));
+		n++;
+		for (int i = 0; i<n; i++)
+		{
+			for (int j = 0; j<n; j++)
+			{
+				cin >> mm[i][j];
+			}
+		}
+
+		floyd();
+		print_m(n);
+		dp[0][0] = 0;
+		for (int stat = 0; stat < (1 << n); stat++)
+		{
+			for (int i = 0; i < n; i++)
+			{
+				if (dp[i][stat] == INF) continue;
+				for (int j = 0; j<n; j++)
+				{
+					if (stat&(1 << j))
+						continue;
+
+					int nex = stat | (1 << j);
+
+					dp[j][nex] = min(dp[j][nex], dp[i][stat] + mm[i][j]);
+
+				}
+			}
+		}
+
+		cout << dp[0][(1 << n) - 1] << endl;
+
+	}
+	return 0;
+}
+#endif
